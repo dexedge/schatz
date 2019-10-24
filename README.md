@@ -15,7 +15,7 @@ The current version of the script `schatz.R` is hosted on GitHub here:
 
 https://github.com/dexedge/schatz
 
-To download, click on the "Clone or download" button at the upper right and choose "Download ZIP". You'll probably want to create a special directory (folder) on your computer for the `schatz.R` script, and this may also be a convenient place for downloading the libretto images.
+To download, click on the "Clone or download" button at the upper right and choose "Download ZIP". You may want to create a special directory (folder) on your computer for the `schatz.R` script, and this may also be a convenient place for downloading the libretto images.
 
 ## Running the `schatz` script
 
