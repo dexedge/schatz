@@ -29,7 +29,7 @@ One easy way to run the `schatz` script (recommended if you're new to working wi
 
 If you are running the script for the first time, it will download two small add-on packages that the script requires: `stringr` (which has functions  used to construct the URLs for downloading the individual images) and `svDialogs` (for user input). These should take only a few seconds to download and install, and this will happen only the first time you run the script.
 
-The script will now take you through a short series of questions. The will first ask for the URL of the *thumbnail gallery* of the libretto you want to download. It is important to use the correct URL here, as the Schatz Collection uses different types of URLs for different things. This is easiest to show with an example.
+The script will now take you through a short series of questions. It will first ask for the URL of the *thumbnail gallery* of the libretto you want to download. It is important to use the correct URL here, as the Schatz Collection uses different types of URLs for different things. This is easiest to show with an example.
 
 Suppose you want to download the original 1767 Viennese libretto for Gluck's *Alceste*. When you find it in the Schatz Collection and open the main record, the URL will look like this:
 
@@ -49,11 +49,11 @@ Note that each box for user input in the `schatz` script comes with a default va
 
 https://www.loc.gov/resource/musschatz.16980.0?st=gallery
 
-This is the libretto for the premiere production of Mozart's *Le nozze di Figaro* in Vienna in 1786. You can, of course, change this to the URL for whatever libretto you're trying to download.
+This is the libretto for the premiere production of Mozart's *Le nozze di Figaro* in Vienna in 1786. You should, of course, change this to the URL for whatever libretto you're trying to download.
 
 The script will now ask you for the numbers of the first and last images you want to download. The default for the first image is "1", so you don't need to enter anything here if you're trying to download the complete libretto. You'll then be asked for the number of the last image you want to download; if you're downloading the complete libretto, enter its highest image number ("38" for *Alceste*). 
 
-Note that the `schatz` script in its current form does very little error checking. If you put in a number higher than the actual last image for a particular libretto, such as `100` for *Alceste*, the script will simply halt with an error as soon as it tries to load image `39` (which doesn't exist).
+Note that the `schatz` script in its current form does very little error checking. If you put in a number higher than the actual last image for a particular libretto, such as `100` for *Alceste*, the script will simply halt with an error as soon as it tries to download image `39` (which doesn't exist).
 
 The script will next open a dialogue asking you to navigate to the folder where you want to store the downloaded images, and it will then ask for the prefix you'd like to use for the filenames of the images, for example `alceste-`. (The default is `image-`.)
 
@@ -61,9 +61,9 @@ The script will next open a dialogue asking you to navigate to the folder where 
 
 The `schatz` script will try to download the entire range of images that you've requested. Sometimes this will work without a hitch, and you'll acquire (for example) all 38 images of *Alceste* in just a few seconds. However, the LOC server sometimes becomes overtaxed: the script may download, say, 10 images, and then the next request will "hang". After an interval of time with no response, the `schatz` script will halt with an error. 
 
-I'm currently investigating ways to deal with this situation. However, if you need to rerun the script to finish downloading a libretto, you can start with the first images that failed to download; you don't need to start over again from the beginning, as you will already have successfully downloaded the images up to the point that the request timed out.
+I'm currently investigating ways to deal with this situation. However, if you need to rerun the script to finish downloading a libretto, you can start with the first image that failed to download; you don't need to start over again from the beginning, as you will already have successfully downloaded the images up to the point that the request timed out.
 
-Please feel free to contact me with questions, bugs, or suggestions:
+Please feel free to contact me with questions, bug reports, or suggestions:
 
 dexedge at gmail dot com
 
