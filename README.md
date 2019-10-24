@@ -5,7 +5,7 @@
 
 [R](https://www.r-project.org) is a popular and widely used interactive programming language with an  emphasis on statistical and data analysis and graphical represntation of the results. It is free and works on MacOS, Windows, and Linux.
 
-Because R is an interactive language, you will need to download R and run the schatz.R script from the R console. However, this is not difficult to do, and the steps are straigtforward.
+Because R is an interactive language, you will need to download R and run the schatz.R script from the R console. However, this is not difficult to do, and the steps are straightforward.
 
 To download R, go to [this page](https://cran.r-project.org/mirrors.html) and select a download mirror, typically a site near you. For example, if you lie in the United Kingdom, you might choose the site at [Imperial College London](https://cran.ma.imperial.ac.uk). Click the link for your operating system (Linux, MacOS, or Windows). If your operating system is reasonably up-to-date, you can probably download the most recent version of R (3.6.1 as of this writing). The instructions for installation will vary by platform. On the Mac, you can download `R-3.6.1.pkg` (or an older version if necessary). When the file is downloaded, simply double-click on it and you'll be taken taken through the installation process.
 
