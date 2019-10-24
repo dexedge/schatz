@@ -63,6 +63,8 @@ The `schatz` script will try to download the entire range of images that you've 
 
 I'm currently investigating ways to deal with this situation. However, if you need to rerun the script to finish downloading a libretto, you can start with the first image that failed to download; you don't need to start over again from the beginning, as you will already have successfully downloaded the images up to the point that the request timed out.
 
+I've had best luck downloading outside of the Library of Congress's opening hours.
+
 Please feel free to contact me with questions, bug reports, or suggestions:
 
 dexedge at gmail dot com
