@@ -102,6 +102,9 @@ cat(end_time - start_time)
 # Meyerbeer, "Semiramide riconsciuta" (Bolgona 1820), 33 images
 #     https://www.loc.gov/resource/musschatz.22200.0?st=gallery
 #
+# Gluck, "Alceste" (Vienn 1767), 38 images
+#     https://www.loc.gov/resource/musschatz.18018.0?st=gallery
+#
 ####################
 
 
