@@ -7,7 +7,7 @@
 
 Because R is an interactive language, you will need to download R and run the `schatz.R` script from the R console. However, this is not difficult to do, and the steps are straightforward.
 
-To download R, go to [this page](https://cran.r-project.org/mirrors.html) and select a download mirror, typically a site near you. For example, if you live in the United Kingdom, you might choose the site at [Imperial College London](https://cran.ma.imperial.ac.uk). Click the link for your operating system (Linux, MacOS, or Windows) and follow the instructions there, which vary by platform. If your operating system is reasonably up-to-date, you can probably download the most recent version of R (3.6.1 as of this writing). On the Mac, you can download `R-3.6.1.pkg` (or an older version if necessary). When the file is downloaded, simply double-click on it and you'll be taken taken through the installation process.
+To download R, go to [this page](https://cran.r-project.org/mirrors.html) and select a download mirror, typically a site near you. For example, if you live in the United Kingdom, you might choose the site at [Imperial College London](https://cran.ma.imperial.ac.uk). Click the link for your operating system (Linux, MacOS, or Windows) and follow the instructions there, which vary by platform. If your operating system is reasonably up-to-date, you can probably use the most recent version of R (3.6.1 as of this writing). On the Mac, you can download `R-3.6.1.pkg` (or an older version if necessary). When the file is downloaded, simply double-click on it and you'll be taken taken through the installation process.
 
 ## Download the `schatz` script
 
@@ -35,11 +35,11 @@ Suppose you want to download the original 1767 Viennese libretto for Gluck's *Al
 
 https://www.loc.gov/item/2010664635/
 
-However, this is **not** the URL needed for the download script. To find the URL for the download script, click on "View 38 images in sequence":
+However, this is **not** the URL that is needed for the download script. To find the URL for the download script, click on "View 38 images in sequence":
 
 !["Alceste" main page](Alceste.png)
 
-This will take you to the thumbnail gallery for the entire libretto. It is the URL of *this* page that you need for the download script; for *Alceste* it is:
+This will take you to the thumbnail gallery for the entire libretto. It is the URL of *this* page that the download script is expecting; for *Alceste* it is:
 
 https://www.loc.gov/resource/musschatz.18018.0?st=gallery
 
@@ -59,11 +59,11 @@ The script will next open a dialogue asking you to navigate to the folder where 
 
 ## Limitations
 
-The `schatz` script will try to download the entire range of images that you've requested. Sometimes this will work without a hitch, and you'll acquire (for example) all 38 images of *Alceste* in just a few seconds. However, the LOC server sometimes becomes overtaxed: the script may download, say, 10 images, and then the next request will "hang". After an interval of time with no response, the `schatz` script will halt with an error. 
+The `schatz` script will try to download the entire range of images that you've requested. Sometimes this will work without a hitch, and you'll acquire (for example) all 38 images of *Alceste* quite quickly. However, the LOC server sometimes becomes overtaxed: the script may download, say, 10 images, and then the next request will "hang". After an interval of time with no response, the `schatz` script will halt with an error. 
 
 I'm currently investigating ways to deal with this situation. However, if you need to rerun the script to finish downloading a libretto, you can start with the first image that failed to download; you don't need to start over again from the beginning, as you will already have successfully downloaded the images up to the point that the request timed out.
 
-I've had best luck downloading outside of the Library of Congress's opening hours.
+The time of day seems to be important to the success of a download attempt. I've had best luck downloading outside of regular working hours, relative to the LOC (Eastern time in the United States). The download script currently has a built-in delay of 1 second between image requests to help with the time-out problem.
 
 Please feel free to contact me with questions, bug reports, or suggestions:
 
