@@ -3,7 +3,7 @@
 # Schatz Collection, Library of Congress    #
 #                                           #
 # Author: Dexter Edge                       #
-# Version: 2019-10-22                       #
+# Version: 2019-10-25                       #
 #############################################
 
 # Load required packages

@@ -55,7 +55,11 @@ The script will now ask you for the numbers of the first and last images you wan
 
 Note that the `schatz` script in its current form does very little error checking. If you put in a number higher than the actual last image for a particular libretto, such as `100` for *Alceste*, the script will simply halt with an error as soon as it tries to download image `39` (which doesn't exist).
 
-The script will next open a dialogue asking you to navigate to the folder where you want to store the downloaded images, and it will then ask for the prefix you'd like to use for the filenames of the images, for example `alceste-`. (The default is `image-`.)
+The script will next open a dialogue asking you to navigate to the folder where you want to store the downloaded images, and it will then ask for the prefix you'd like to use for the image filenames, for example `alceste-`. (The default is `image-`.)
+
+The script will now begin to download the images. It will download them at the highest available JPEG resolution--which is in fact not all that high: images that show an opening of two pages (the norm) will typically fall within the range of 100 to 200 KB. These are quite legible, and will probably be the preferred choice in most cases.
+
+This choice is hardcoded in the script. The other options available through the LOC interface are GIF, two lower resolutions of JPEG, JPEG2000 (not widely used), and TIFF. The GIF files seeem simply to be the thumbnail images, and are unlikely to be useful. The two lower JPEG resolutions degrade the legibility of the libretto's text. The TIFF and JPEG2000 formats use a different form of URL than do the JPEG files, and would require significant modifications to the `schatz` script. If you need the uncompressed TIFF file of an individual page, this is easy enought to download "by hand" directly from the LOC site.
 
 ## Limitations
 
