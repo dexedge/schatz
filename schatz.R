@@ -88,7 +88,7 @@ tryCatch(
 )
 
 end_time <- Sys.time()
-cat(end_time - start_time)
+cat("Time: ", end_time - start_time)
 
 ####################
 # Libretto gallery URLs
