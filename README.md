@@ -43,7 +43,7 @@ This will take you to the thumbnail gallery for the entire libretto. It is the U
 
 https://www.loc.gov/resource/musschatz.18018.0?st=gallery
 
-The script needs the number from this URL (18018, which the script will automatically extract) to build individual URLs for downloading each image.
+The script needs the number from this URL (18018, which the script will automatically extract) to build individual URLs for downloading each image. It's best to have your URL ready and copied to the clipboard before running the `schatz` script.
 
 Note that each box for user input in the `schatz` script comes with a default value. For the URL, it is:
 
@@ -57,17 +57,23 @@ Note that the `schatz` script in its current form does very little error checkin
 
 The script will next open a dialogue asking you to navigate to the folder where you want to store the downloaded images, and it will then ask for the prefix you'd like to use for the image filenames, for example `alceste-`. (The default is `image-`.)
 
-The script will now begin to download the images. It will download them at the highest available JPEG resolution--which is in fact not all that high: images that show an opening of two pages (the norm) will typically fall within the range of 100 to 200 KB. These are quite legible, and will probably be the preferred choice in most cases.
+The script will now begin to download the images. It will download them at the highest available JPEG resolution, which is in fact not all that high: images that show an opening of two pages (the norm) will typically fall within the range of 100 to 200 KB. These are quite legible, and will probably be the preferred choice in most cases.
 
-This choice is hardcoded in the script. The other options available through the LOC interface are GIF, two lower resolutions of JPEG, JPEG2000 (not widely used), and TIFF. The GIF files seeem simply to be the thumbnail images, and are unlikely to be useful. The two lower JPEG resolutions degrade the legibility of the libretto's text. The TIFF and JPEG2000 formats use a different form of URL than do the JPEG files, and would require significant modifications to the `schatz` script. If you need the uncompressed TIFF file of an individual page, this is easy enought to download "by hand" directly from the LOC site.
+This choice is hardcoded in the `schatz` script. The other options available through the LOC interface are GIF, two lower resolutions of JPEG, JPEG2000 (not widely used), and TIFF. The GIF files seeem simply to be the thumbnail images, and are unlikely to be useful. The two lower JPEG resolutions degrade the legibility of the libretto's text. The TIFF and JPEG2000 formats use a different form of URL than do the JPEG files, and would require significant modifications to the `schatz` script. If you need the uncompressed TIFF file of an individual image, this is easy enought to download "by hand" directly from the LOC site.
 
 ## Limitations
 
-The `schatz` script will try to download the entire range of images that you've requested. Sometimes this will work without a hitch, and you'll acquire (for example) all 38 images of *Alceste* quite quickly. However, the LOC server sometimes becomes overtaxed: the script may download, say, 10 images, and then the next request will "hang". After an interval of time with no response, the `schatz` script will halt with an error. 
+The `schatz` script will try to download the entire range of images that you've requested. Sometimes this will work without a hitch, and you'll acquire (for example) all 38 images of *Alceste* quite quickly. (The download script currently has a built-in delay of 1 second between image requests.)
 
-I'm currently investigating ways to deal with this situation. However, if you need to rerun the script to finish downloading a libretto, you can start with the first image that failed to download; you don't need to start over again from the beginning, as you will already have successfully downloaded the images up to the point that the request timed out.
+However, the LOC server sometimes becomes overtaxed: the script may download, say, 10 images, and then the next request will "hang". It is R's `download.file()` function that does the work of downloading each individual file. This function has a default `timeout` option of 60 seconds; if a request by `download.file()` does not receive a response from the LOC server within 60 seconds, the script will halt with an error.
 
-The time of day seems to be important to the success of a download attempt. I've had best luck downloading outside of regular working hours, relative to the LOC (Eastern time in the United States). The download script currently has a built-in delay of 1 second between image requests to help with the time-out problem.
+If you need to rerun the script to finish downloading a libretto, you can start with the first image that failed to download; you don't need to start over again from the beginning, as you will already have successfully downloaded the images up to the point that the request timed out. 
+
+You can, if you wish, change the value of `timeout`: at the command prompt in the R console, simply type `options(timeout=120)` (if for example you want to have `download.file()` wait 120 seconds instead of 60 before giving up). You can in fact set this value to whatever you want. Provided that you choose "Don't Save" when R asks if you want to save your Workspace Image when quitting R (it's generally recommended not to save it), `timeout` will reset to the default value of 60 seconds the next time you run the script.
+
+However, if you're having trouble completing a download, the best strategy is often simply to try again later. Time of day seems to be important to the success of a download attempts from the LOC server. I've generally had the best luck downloading outside of regular working hours, relative to the LOC (Eastern Time in the United States), although this is only a rough rule-of-thumb. Sometimes libretti will download in the middle of a weekday without any problem.
+
+The "Cancel" buttons on the boxes for user input unfortunately do not cancel the script, they cancel only the current input box and take you to the next one. If you cancel through all the input boxes, the script will halt with an error. At the moment, this is the only way to quit the script after it starts running. (I may add more graceful user controls as time permits.)
 
 Please feel free to contact me with questions, bug reports, or suggestions:
 

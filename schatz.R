@@ -18,7 +18,7 @@ start_time <- Sys.time()
 # Base URL
 head <- "https://tile.loc.gov/image-services/iiif/service:music:musschatz:"
 
-# Tail of URL for JPEGs at largest size = 50%
+# Tail of URL for JPEGs at largest size = "50%"
 tail <- "/full/pct:50.0/0/default.jpg"
 
 
@@ -88,16 +88,19 @@ tryCatch(
 )
 
 end_time <- Sys.time()
-cat("Time: ", end_time - start_time)
+cat("Time: ", end_time - start_time, " minutes")
 
-####################
-# Libretto gallery URLs
+#############################################################
+# Gallery URLs for some libretti in the Schatz Collection
 #
 # "Le nozze di Figaro" (Vienna 1786), 56 images
 #    https://www.loc.gov/resource/musschatz.16980.0?st=gallery
 #
 # "Don Juan" (Frankfurt 1788), 20 images
 #    https://www.loc.gov/resource/musschatz.16823.0?st=gallery
+#
+# "Don Giovanni" (Prague 1787), 40 images
+#    https://www.loc.gov/resource/musschatz.16901.0?st=gallery
 # 
 # Meyerbeer, "Semiramide riconsciuta" (Bolgona 1820), 33 images
 #     https://www.loc.gov/resource/musschatz.22200.0?st=gallery
@@ -105,6 +108,6 @@ cat("Time: ", end_time - start_time)
 # Gluck, "Alceste" (Vienn 1767), 38 images
 #     https://www.loc.gov/resource/musschatz.18018.0?st=gallery
 #
-####################
+#############################################################
 
 
