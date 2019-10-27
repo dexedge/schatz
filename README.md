@@ -15,7 +15,7 @@ The current version of the script `schatz.R` is hosted on GitHub here:
 
 https://github.com/dexedge/schatz
 
-To download, click on the "Clone or download" button at the upper right and choose "Download ZIP". (Depending on what browser you're using, you may also be able to download the `schatz.R` script directly from its link on the GitHub page.) 
+To download, click on the "Clone or download" button at the upper right and choose "Download ZIP". Depending on what browser you're using, you may also be able to download the `schatz.R` script directly from its link on the GitHub page. 
 
 You may want to create a special directory (folder) on your computer for the `schatz.R` script, and this may also be a convenient place for downloading the libretto images.
 
@@ -67,15 +67,15 @@ The script will next open a dialogue asking you to navigate to the folder where 
 
 Finally, the script will ask for the level of JPEG compression. The options are 50%, 75%, and 100%, where 100% is **maximum resolution**.
 
-The LOC interface itself offers five options for images: GIF, three levels of JPEG compression (12.5%, 25%, and 50%), JPEG2000 (not widely uses), and TIFF. The GIF files seem simply to be the thumbnail images, and are unlikely to be useful. The TIFF and JPEG2000 formats use a different form of URL than do the JPEG files, and would require significant modifications to the `schatz` script. Individual TIFF images are easy enough to download by hand. They are quite large (ca. 5 MB), and yet the basic resolution is not all that high, as can seen by enlarging one.
+The LOC interface itself offers five options for images: GIF, three levels of JPEG compression (12.5%, 25%, and 50%), JPEG2000 (not widely used), and TIFF. The GIF files seem to be the thumbnail images, and are unlikely to be useful. The TIFF and JPEG2000 formats use a different form of URL than do the JPEG files, and would require significant modifications to the `schatz` script. Individual TIFF images are easy enough to download by hand. They are quite large (ca. 5 MB), and yet the basic resolution is not all that high, as can seen by enlarging one.
 
 ![](LOC-tiff-example.png)
 </br></br>
-The maximum JPEG resolution offered by the LOC interface is 50% (in other words, apparently, 50% compression of the uncompressed TIFF file). The two lower JPEG resolutions offered by the LOC interface (12.5% and 25%) degrade the legibility of the libretto's text to a point that most users probably won't prefer. 
+The maximum JPEG resolution offered by the LOC interface is 50% (in other words, roughly 50% of the resolution of the uncompressed TIFF file). The two lower JPEG resolutions offered by the LOC interface (12.5% and 25%) degrade the legibility of the libretto's text to a point that many users may find too fuzzy.
 
-However, although this appears to be undocumented, the LOC system will also produce JPEG images with 75% and 100% resolution (The trick is to insert "75" or "100" at the appropriate place in the URL.) So as a last step, the `schatz` script offers a choice of JPEG at 50%, 75%, or 100% resolution (50% is the default). At 100%, images of two-page spreads will typically be in the range of 450 to 550 KB.
+However, the LOC system will also produce JPEG images with 75% and 100% resolution, although this appears to be undocumented. (The trick is to insert "75" or "100" at the appropriate place in the URL.) So as a last step, the `schatz` script offers a choice of JPEG at 50%, 75%, or 100% resolution (50% is the default). At 100%, images of two-page spreads will typically be in the range of 450 to 550 KB.
 
-**NOTE:** Because the availability of JPEG downloads at 75% and 100% seems to be an undocumented feature, it is probably best to request these higher resolutions only when you really need them. Libretto images at the default resolution of 50% are generally quite clearly legible, and will probably be sufficient for most uses. JPEG images at 100% are nearly indistinguishable from the TIFFs, but the files are considerably smaller.
+**NOTE:** Because the availability of JPEG downloads at 75% and 100% seems to be an undocumented feature, it is probably best to request these higher resolutions only when you really need them. Libretto images at the default resolution of 50% are generally quite legible, and will probably be sufficient for most uses. JPEG images at 100% are nearly indistinguishable from the TIFFs, but the files are considerably smaller.
 
 ## Limitations
 
