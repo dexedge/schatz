@@ -65,9 +65,9 @@ The script will next open a dialogue asking you to navigate to the folder where 
 
 ## Image resolution
 
-Finally, the script will ask for the level of JPEG compression. The options are 50%, 75%, and 100%, where 100% is **maximum resolution**.
+Finally, the script will ask for the level of JPEG resolution. The options are 50%, 75%, and 100%, where 100% is **maximum resolution**.
 
-The LOC interface itself offers five options for images: GIF, three levels of JPEG compression (12.5%, 25%, and 50%), JPEG2000 (not widely used), and TIFF. The GIF files seem to be the thumbnail images, and are unlikely to be useful. The TIFF and JPEG2000 formats use a different form of URL than do the JPEG files, and would require significant modifications to the `schatz` script. Individual TIFF images are easy enough to download by hand. They are quite large (ca. 5 MB), and yet the basic resolution is not all that high, as can seen by enlarging one.
+The LOC interface itself offers five options for images: GIF, three levels of JPEG resolution (12.5%, 25%, and 50%), JPEG2000 (not widely used), and TIFF. The GIF files seem to be the thumbnail images, and are unlikely to be useful. The TIFF and JPEG2000 formats use a different form of URL than do the JPEG files, and would require significant modifications to the `schatz` script. Individual TIFF images are easy enough to download by hand. They are quite large (ca. 5 MB), and yet the basic resolution is not all that high, as can seen by enlarging one.
 
 ![](LOC-tiff-example.png)
 </br></br>
