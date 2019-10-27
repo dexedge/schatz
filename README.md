@@ -87,9 +87,11 @@ If you need to rerun the script to finish downloading a libretto, you can start 
 
 You can, if you wish, change the value of `timeout`: at the command prompt in the R console, simply type `options(timeout=120)` (if, for example, you want to have `download.file()` wait 120 seconds instead of 60 before giving up). You can in fact set this value to whatever you want. If when quitting R you choose "Don't Save" (as is generally recommended) when R asks if you want to save your "workspace image"", `timeout` will reset to the default value of 60 seconds the next time you run the script.
 
-However, if you're having trouble completing a download, the best strategy is often simply to try again later. Time of day seems to be important to the success of a download attempts from the LOC server. I've generally had the best luck downloading outside of regular working hours, relative to the LOC (Eastern Time in the United States), although this is only a rule-of-thumb. Sometimes libretti will download in the middle of a weekday without any problem.
+However, if you're having trouble completing a download, the best strategy is often simply to try again later. Time of day seems to be important to the success of download attempts from the LOC server. I've generally had the best luck downloading outside of regular working hours, relative to the LOC (Eastern Time in the United States), although this is only a rule-of-thumb. Sometimes libretti will download in the middle of a weekday without any problem.
 
 ____
+At present, this script has only been tested on Macs running OS 10.13.6 (High Sierra) and 10.15 (Catalina). If you encounter problems running it on Windows, Linux, or other versions of the Mac OS, please let me know.
+
 Please feel free to contact me with questions, bug reports, or suggestions:
 
 dexedge at gmail dot com
