@@ -18,7 +18,6 @@ library(tictoc)
 
 head <- "https://tile.loc.gov/image-services/iiif/service:music:musschatz:"
 
-
 ######### GET USER INPUT ##############
 # Get ULR of libretto thumbnail gallery
 # figaro is default
